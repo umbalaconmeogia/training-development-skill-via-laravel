@@ -15,3 +15,33 @@
     ![Top page](images/setupLaravel/localhost.png)
 
 Reference: https://www.tutorialspoint.com/laravel/laravel_installation.htm
+
+## Configuration
+
+* We set configuration (such as database connection, mail server etc) in the file .env. This values is load into config files in the *config* folder.
+* The file *.env* is individual for each environment (product, development, dev PCs...) and is not commit to git for security reason.
+* The file *.env* is generated from *.env.example*, so *.env.example* should contains all available variables may be declared in *.env*.
+* We use env-helper function *env()* to retrieve variable from the file *.env* in config files. But in another file (programing code files), don't use env(), use config() function to get all configurations.
+
+## Routing
+
+* Defined in *routes/web.php*
+* Basic: return view().
+* Required parameter and optional parameter.
+* Named routes: chưa hiểu.
+
+Reference: https://www.tutorialspoint.com/laravel/laravel_routing.htm
+
+## Other tool
+
+### Maintenance mode
+
+To set into maintenance mode
+```shell
+    php artisan down
+```
+
+To disable maintenance mode
+```shell
+    php artisan up
+```

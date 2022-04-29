@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('sample', function () {
+    return view('sample');
+});
+
+Route::get('ID/{id}', function($id) {
+    echo "ID: $id";
+});
+
+Route::get('user/{name?}', function ($name = 'TutorialsPoint') {
+    return "Name: $name";
+});
