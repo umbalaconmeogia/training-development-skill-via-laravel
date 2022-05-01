@@ -28,3 +28,22 @@ Route::get('ID/{id}', function($id) {
 Route::get('user/{name?}', function ($name = 'TutorialsPoint') {
     return "Name: $name";
 });
+
+Route::get('role', [
+    'middleware' => 'Role:editor',
+    'uses' => 'App\Http\Controllers\TestController@index',
+ ]);
+
+Route::get('terminate', [
+    'middleware' => 'Role:editor',
+    'uses' => 'App\Http\Controllers\TestController@index',
+ ]);
+
+ Route::get('terminate',[
+    'middleware' => 'terminate',
+    'uses' => 'App\Http\Controllers\ABCController@index',
+ ]);
+
+Route::get('blade/child', function() {
+    return view('child');
+});

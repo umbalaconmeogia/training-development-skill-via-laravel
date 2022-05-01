@@ -21,10 +21,13 @@
         </style>
     </head>
     <body class="antialiased">
-        <ul>
+        <ol>
             <li><a href="{{ url('ID/123id') }}">ID/123id</a></li>
             <li><a href="{{ url('user/') }}">user/</a></li>
             <li><a href="{{ url('user/123name') }}">user/123name</a></li>
-        </ul>
+            <li><a href="{{ url('role') }}">role</a></li>
+            <li><a href="{{ url('terminate') }}">terminate</a></li>
+            <li><a href="{{ url('blade/child') }}">blade/child</a></li>
+        </ol>
     </body>
 </html>

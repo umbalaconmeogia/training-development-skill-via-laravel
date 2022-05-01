@@ -26,11 +26,42 @@ Reference: https://www.tutorialspoint.com/laravel/laravel_installation.htm
 ## Routing
 
 * Defined in *routes/web.php*
+* There are two types of middleware
+    * Global Middleware
+    * Route Middleware
 * Basic: return view().
 * Required parameter and optional parameter.
 * Named routes: chưa hiểu.
 
 Reference: https://www.tutorialspoint.com/laravel/laravel_routing.htm
+
+## Middleware
+
+* Create middleware and registered in Kernel.php
+    ```shell
+    php artisan make:middleware <MiddleWareName>
+    ```
+    * Middleware handle() run before controller.
+    * Middleware terminate() run after controller.
+
+## Controller
+
+* Creating a controller
+    ```shell
+    php artisan make:controller <controller name>
+    ````
+* Controller middleware: Attach middleware in Route or in controller's __construct()
+* Restful resource controller: Use Route::resource()
+    ```php
+    Route::resource($path, $controllerClass);     
+    ```
+* Implicit controller: Use Route::controller()
+    ```php
+    Route::controller($baseUri, $controllerClass);
+    ```
+* Constructor injection: *TODO: CHƯA HIỂU*
+
+### Request
 
 ## Other tool
 
@@ -45,3 +76,7 @@ To disable maintenance mode
 ```shell
     php artisan up
 ```
+
+# Preferences
+
+* [riptutorial](https://riptutorial.com/Download/laravel.pdf)
